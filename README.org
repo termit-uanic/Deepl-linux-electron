@@ -68,6 +68,12 @@
      yarn install
      yarn dist
    #+END_SRC
+   #+BEGIN_SRC sh
+     # build with a single command
+     docker run -it --rm --name deepl-linux -v $(pwd):/app -w /app node:20 bash -c "yarn install && yarn dist"
+   #+END_SRC
+
+
 
 ** run on linux
   Deepl may not start with the error
@@ -91,7 +97,7 @@
 
    just run with parameter:
    #+begin_src sh
-     ./Deepl-Linux-Electron-1.5.0.AppImage --no-sandbox
+     ./Deepl-Linux-Electron-1.7.0.AppImage --no-sandbox
    #+end_src
 
    see:
